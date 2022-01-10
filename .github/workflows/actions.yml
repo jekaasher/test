@@ -14,7 +14,7 @@ on:
     paths-ignore: 
 #      - '.github/workflows/**'
       - '.deployments/**'
-
+#First condition
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
  # GCP_ZONE: europe   # TODO: update to cluster zone
