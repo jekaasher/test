@@ -20,8 +20,8 @@ env:
   GCP_ZONE: europe   # TODO: update to cluster zone
   IMAGE: alpine_main
   REPOSITORY: test #for artifact registry only
-  CLUSTER_NAME: test-cluster
-  CLUSTER_ZONE: europe-central2
+ # CLUSTER_NAME: test-cluster
+ # CLUSTER_ZONE: europe-central2
 
 jobs:
   Setup-build-publish:
