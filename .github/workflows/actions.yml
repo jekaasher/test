@@ -55,9 +55,9 @@ jobs:
             --build-arg GITHUB_REF="$GITHUB_REF" \
             .
       # Send status message depending job.status
-      - name: Sending status message
-        if: ${{ always() }} 
-        uses: rtCamp/action-slack-notify@v2
+    #  - name: Sending status message
+    #    if: ${{ always() }} 
+     #   uses: rtCamp/action-slack-notify@v2
       #  env:
        #   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         #  SLACK_MESSAGE: "Built ${{ env.IMAGE_VERSION }} ${{ job.status }}"
