@@ -15,7 +15,7 @@ on:
 #      - '.github/workflows/**'
       - '.deployments/**'
 # Do not forget about keys
-# grc.io with new conf on gcr
+# grc.io with new conf on gcr and perm
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_ZONE: europe   # TODO: update to cluster zone
