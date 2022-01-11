@@ -20,9 +20,9 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_ZONE: europe   # TODO: update to cluster zone
   IMAGE: alpine_main
-  REPOSITORY: alpine_main #for artifact registry only (changet from test)
-  CLUSTER_NAME: test-cluster
-  CLUSTER_ZONE: europe-central2
+ # REPOSITORY: test #for artifact registry only 
+ # CLUSTER_NAME: test-cluster
+ # CLUSTER_ZONE: europe-central2
 
 jobs:
   Setup-build-publish:
