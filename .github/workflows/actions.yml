@@ -15,6 +15,7 @@ on:
 #      - '.github/workflows/**'
       - '.deployments/**'
 # Do not forget about keys
+# new key
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_ZONE: europe   # TODO: update to cluster zone
@@ -45,7 +46,7 @@ jobs:
           image-version: $IMAGE_VERSION
           repository: $REPOSITORY
           zone: $GCP_ZONE
-
+      
       # Build the Docker image with tag for google container registry
       - name: Build
         run: |-
