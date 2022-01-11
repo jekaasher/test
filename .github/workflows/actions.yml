@@ -80,8 +80,8 @@ jobs:
           image: ${{ steps.image-tag.outputs.gcr-tag }}
 
        # Re-tag image for artifact registry
-     # - name: Re-tag
-     #   run: docker tag ${{ steps.image-tag.outputs.gcr-tag }} ${{ steps.image-tag.outputs.gar-tag }}
+      - name: Re-tag
+        run: docker tag ${{ steps.image-tag.outputs.gcr-tag }} ${{ steps.image-tag.outputs.gar-tag }}
 
        # Push the Docker image to Google Artifact Registry
       - name: Publish
