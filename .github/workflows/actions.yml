@@ -16,8 +16,6 @@ on:
       - '.deployments/**'
       
 # Do not forget about keys
-# grc.io with new conf on gcr and perm
-#test for release branch
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
