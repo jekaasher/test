@@ -69,12 +69,12 @@ jobs:
         run: git tag $IMAGE_VERSION && git push --tags
 
       # Push the Docker image to Google Container Registry
-      - name: Publish
-        uses: ./.github/workflows/push-to-gcr-action
-        with: 
-          service-account-key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-          project-id: ${{ secrets.GCP_PROJECT }}
-          image: ${{ steps.image-tag.outputs.gcr-tag }}
+    #  - name: Publish
+    #    uses: ./.github/workflows/push-to-gcr-action
+    #    with: 
+   #       service-account-key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+   #       project-id: ${{ secrets.GCP_PROJECT }}
+   #       image: ${{ steps.image-tag.outputs.gcr-tag }}
 
       # # Re-tag image for artifact registry
       # - name: Re-tag
