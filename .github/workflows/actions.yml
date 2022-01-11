@@ -16,7 +16,6 @@ on:
       - '.deployments/**'
       
 # Do not forget about keys
-# Testing new key
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_ZONE: europe   # TODO: update to cluster zone
