@@ -58,10 +58,10 @@ jobs:
       - name: Sending status message
         if: ${{ always() }} 
         uses: rtCamp/action-slack-notify@v2
-      #  env:
-       #   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        #  SLACK_MESSAGE: "Built ${{ env.IMAGE_VERSION }} ${{ job.status }}"
-       #   SLACK_COLOR: ${{ job.status }}
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "Built ${{ env.IMAGE_VERSION }} ${{ job.status }}"
+          SLACK_COLOR: ${{ job.status }}
 
       # After successful build add tag
       - name: Update release number
@@ -98,10 +98,10 @@ jobs:
        #   cluster: ${{ env.CLUSTER_NAME }}
 
       # Send status message depending job.status
-     # - name: Sending status message
-      #  if: ${{ always() && github.base_ref == 'main' }}
-      #  uses: rtCamp/action-slack-notify@v2
-      #  env:
-       #   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        #  SLACK_MESSAGE: "Deploy ${{ env.IMAGE_VERSION }} ${{ job.status }}"
-       #   SLACK_COLOR: ${{ job.status }}
+      - name: Sending status message
+        if: ${{ always() && github.base_ref == 'main' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "Deploy ${{ env.IMAGE_VERSION }} ${{ job.status }}"
+          SLACK_COLOR: ${{ job.status }}
